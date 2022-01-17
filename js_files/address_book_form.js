@@ -3,11 +3,12 @@
 const fullName = document.querySelector("#name");
 const nameError = document.querySelector(".text-error");
 fullName.addEventListener('input' , function() {
-    let nameRegex = /^[A-Z]{1}([a-z]){2,}$/;
+    let nameRegex1 = /^[A-Z]{1}([a-z]){2,}$/;      //First-name validation[1 upper case character followed by lower case characters(must be minimum 3 characters)].
+    let nameRegex2 = /^[A-Z]{1}[a-z]{2,}[\s]?[A-Z]{1}[a-z]{2,}$/;  //Full-Name validation[First-name validation and a single space or no space is allowed and repeat first-name validation.].
     if(fullName.value === ""){
         nameError.textContent = " ";
     }
-    else if(nameRegex.test(fullName.value)){
+    else if(nameRegex1.test(fullName.value) || nameRegex2.test(fullName.value)){
         nameError.textContent = " ";
     }
     else{
