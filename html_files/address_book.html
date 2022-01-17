@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Address Book Form</title>
+    <link rel="stylesheet" href="../css_files/address_book.css">
+</head>
+<body>
+    <!-- ------------UC-1-------------- -->
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/images/icons8-address-book-2-50.png" alt="">
+            <div>
+                <span class="add-text">ADDRESS</span><br>
+                <span class="add-text add-book">BOOK</span>
+            </div>
+        </div>
+    </header>
+    <!-- --------------UC-1------------------ -->
+
+    <!-- ---------------UC-2---------------- -->
+
+    <div class="form-header">
+        <h1 class="form-header-text">PERSON ADDRESS FORM</h1>
+        <div class="cancel-button">
+            <a href="./home_page.html">
+                <img src="../assets/icons/NicePng_close-button-png_521935.png" width="30px" height="30px" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- ---------------------- UC-2 ----------------------------- -->
+
+    <form class="form" action="#">
+        <!-- -----------------------UC-3------------------------------ -->
+        <div class="row-content">
+            <h5 class="h5">Full Name :- </h5>
+            <input type="text" id="name" class="input name" name="name" placeholder="Enter your name..." required>
+            <!-- ---------UC-4-------------- -->
+            <error-output class="text-error" for="name"></error-output>
+            <!-- ---------UC-4-------------- -->
+        </div>
+        <div class="row-content">
+            <h5 class="h5">Phone Number :- </h5>
+            <input type="ph" id="phoneNum" class="input phoneNum" name="phoneNum" placeholder="Enter phone number..." required>
+            <!-- --------------UC-4----------------- -->
+            <error-output class="phone-error" for="phoneNum"></error-output>
+            <!-- -------------UC-4-------------------- -->
+        </div>
+        <div class="row-content">
+            <h5 class="h5">Address :- </h5>
+            <input type="text" id="address" name="address" class="input address" placeholder="Enter your address..." required>
+            <!-- --------------------------UC-4----------------------- -->
+            <error-output class="address-error" for="address"></error-output>
+            <!-- -------------------------UC-4------------------------ -->
+        </div>
+        <div class="row-content cityStateZip">
+            <span class="cityStateSelect">
+                <h5 class="h5">City :- </h5>
+                <select name="city" id="select">
+                    <option value="ap">Hyderabad</option>
+                    <option value="ts">Ongole</option>
+                    <option value="guntur">Guntur</option>
+                    <option value="nellore">Nellore</option>
+                    <option value="vijayawada">Vijayawada</option>
+                </select>
+            </span>
+            <span class="cityStateSelect">
+                <h5 class="h5">State :- </h5>
+                <select name="state" id="select">
+                    <option value="ap">Andhra Pradesh</option>
+                    <option value="ts">Telangana</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="goa">Goa</option>
+                    <option value="jk">Jammu & Kashmir</option>
+                </select>
+            </span>
+            <span class="zip-code">
+                <h5 class="h5">Zip-Code :- </h5>
+                <input type="text" id="zip" class="input zip" name="zip" placeholder="Enter zip-code...">
+                <!-- -----------------------------UC-4----------------------------- -->
+                <error-output class="zip-error" for="zip"></error-output>
+                <!-- -----------------------------UC-4----------------------------- -->
+            </span>
+        </div>
+        <!-- ---------------------------------UC-3--------------------------------------------------- -->
+
+        <!-- ----------------------------UC-5---------------------------------- -->
+        <div class="button-parent">
+            <span class="button-add">
+                <button type="submit" class="button add-button">Add</button>
+            </span>
+            <span class="button-reset">
+                <button type="reset" class="button reset-button">Reset</button>
+            </span>
+        </div>
+        <!-- ---------------------------UC-5----------------------------------- -->
+    </form>
+
+    <script type="text/javascript" src="../js_files/address_book_form.js"></script>
+</body>
+</html>
