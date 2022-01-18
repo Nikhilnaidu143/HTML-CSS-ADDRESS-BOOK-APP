@@ -12,7 +12,7 @@ fullName.addEventListener('input' , function() {
         nameError.textContent = " ";
     }
     else{
-        nameError.textContent = "Invalid Name..!"
+        nameError.textContent = "Invalid Name...!"
     }
 });
 
@@ -28,7 +28,23 @@ phoneNumber.addEventListener('input' , function() {
         phoneNumError.textContent = " ";
     }
     else{
-        phoneNumError.textContent = "Invalid Phone Number..!"
+        phoneNumError.textContent = "Invalid Phone Number...!"
+    }
+});
+
+/** Address validation. */
+const address = document.querySelector("#address");
+const addressError = document.querySelector(".address-error");
+address.addEventListener('input' , function() {
+    let addressRegex = /\s*[\w\d]{3,}(?:\s+[\w\d]{3,})*\s*$/;
+    if(address.value === ""){
+        addressError.textContent = " ";
+    }
+    else if(addressRegex.test(address.value)){
+        addressError.textContent = " ";
+    }
+    else{
+        addressError.textContent = "Invalid address...!";
     }
 });
 
@@ -44,6 +60,6 @@ zipCode.addEventListener('input' , function() {
         zipCodeError.textContent = " ";
     }
     else{
-        zipCodeError.textContent = "Invalid Zip Code..!"
+        zipCodeError.textContent = "Invalid Zip Code...!"
     }
 });
